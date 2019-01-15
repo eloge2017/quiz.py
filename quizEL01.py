@@ -10,7 +10,8 @@ def run_qa_loop(qStr, qCheck, ansU, ansCor):
             ansU = int(input())
             if ansU == ansCor:
                 print("good job")
-                #score+=1
+                global grade
+                score+=1
                 qCheck = True
             elif 0 < ansU < 5:
                 print("good job")
@@ -20,7 +21,7 @@ def run_qa_loop(qStr, qCheck, ansU, ansCor):
         except ValueError:
             print("Please pick one of the number that your answer correspond to.")
 
-#score= int(0)
+score= int(0)
 q1 = """How many toes do you have on both feet?
 (1) 7
 (2) 5
@@ -45,3 +46,4 @@ q2Ans = 2
 run_qa_loop(q1, a1, check1, q1Ans)
 #question 2
 run_qa_loop(q2, a2, check2, q2Ans)
+print("you got ", score * 50, "%.")
