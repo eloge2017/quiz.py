@@ -2,6 +2,7 @@
 #INT variable
 #defining a function
     #name the function
+grade = 0
 def run_qa_loop(qStr, qCheck, ansU, ansCor):
     print(qStr)
 
@@ -11,7 +12,7 @@ def run_qa_loop(qStr, qCheck, ansU, ansCor):
             if ansU == ansCor:
                 print("good job")
                 global grade
-                score+=1
+                grade+=1
                 qCheck = True
             elif 0 < ansU < 5:
                 print("good job")
@@ -80,7 +81,7 @@ q6 = """How many weekends are in a week?
 
 a6 = int(0)
 check6 = bool(False)
-q6Ans = 2
+q6Ans = 4
 
 q7 = """How tall is Eloge?
 (1) 7
@@ -92,7 +93,7 @@ a7 = int(0)
 check7 = bool(False)
 q7Ans = 2
 
-q8 = """what is favorite color?
+q8 = """what is eloge's favorite color?
 (1) purple
 (2) blue
 (3) red
@@ -143,4 +144,28 @@ run_qa_loop(q9, a9, check9, q9Ans)
 #question 10
 run_qa_loop(q10, a10, check10, q10Ans)
 
-print("you got ", score * 10, "%.")
+print("you got",grade *10,"%")
+
+if grade == 10:
+    print("excellent!!!")
+elif grade == 9:
+    print("you got my favorite color wrong didn't you, we not friends")
+elif grade == 8:
+    print("you're almost there, keep trying")
+elif grade == 7:
+    print("you're almost there, keep trying")
+elif grade == 6:
+    print("you're almost there, keep trying")
+elif grade == 5:
+    print("you're almost there, keep trying")
+elif grade == 4:
+    print("you're almost there, keep trying")
+elif grade == 3:
+    print("you're almost there, keep trying")
+elif grade == 2:
+    print("you're almost there, keep trying")
+elif grade == 1:
+    print("you're almost there, keep trying")
+else:
+    print("your IQ is -32")
+
